@@ -2,13 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="http://electricon.com.mx/mapa_interactivo/lib/css/mapa.css">
+  <link rel="stylesheet" type="text/css" href="http://electricon.com.mx/mapa/lib/css/mapa.css">
   <title>Electricon</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="http://electricon.com.mx/mapa/lib/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="http://electricon.com.mx/mapa/lib/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="http://electricon.com.mx/mapa/lib/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="http://electricon.com.mx/mapa/lib/favicon/manifest.json">
+  <link rel="mask-icon" href="http://electricon.com.mx/mapa/lib/favicon/safari-pinned-tab.svg" color="#136fa0">
+  <meta name="apple-mobile-web-app-title" content="Electricon">
+  <meta name="application-name" content="Electricon">
+  <meta name="msapplication-TileColor" content="#136fa0">
+  <meta name="msapplication-TileImage" content="http://electricon.com.mx/mapa/lib/favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#8ed0f3">
 </head>
 <body>
 <div id="contenedorPrincipal">
   <header>
-    <img src="http://electricon.com.mx/mapa_interactivo/lib/img/logo-portal-web.png" alt="electricon">
+    <img src="http://electricon.com.mx/mapa/lib/img/logo-portal-web.png" alt="electricon">
     <?php if(isset($_SESSION['login_user'])) { ?>
     	<a class="user-options" href="logout.php">Log Out</a>
     <?php } else { ?>
@@ -17,7 +27,7 @@
     <span class="user-name"><?php echo $_SESSION['login_user']; ?></span>
   </header>
   <section id="contenedorMapa">
-    <img src="http://electricon.com.mx/mapa_interactivo/lib/img/electricon.png" alt="Electricon">
+    <img src="http://electricon.com.mx/mapa/lib/img/electricon.png" alt="Electricon">
     <ul id="lugares"></ul>
   </section>
 </div>
@@ -58,6 +68,6 @@
   var userOptions = {'userName': <?php echo json_encode($_SESSION['login_user']); ?>, 'role': <?php echo json_encode($_SESSION['role_user']); ?>};
   //document.write("estands = " + variablejs);
 </script>
-<script src="http://electricon.com.mx/mapa_interactivo/lib/js/mapa.js"></script>
+<script src="http://electricon.com.mx/mapa/lib/js/mapa.js"></script>
 </body>
 </html>
