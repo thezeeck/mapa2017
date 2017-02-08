@@ -6,12 +6,11 @@ body {
   height: 100%;
   margin: 0; }
 
-#contenedorPrincipal {
-  background-color: #f9f9f9;
-  height: 100%; }
+body * {
+  box-sizing: border-box; }
 
 header {
-  background-color: #fff;
+  background-color: #31313C;
   border-bottom: 3px solid #0e7bdd;
   color: #FFF;
   height: 70px;
@@ -20,6 +19,12 @@ header {
   top: 0;
   width: 100%;
   z-index: 1; }
+  header img {
+    height: 60px;
+    margin: 5px 20px; }
+
+#contenedorPrincipal {
+  height: 100%; }
 
 header img {
   height: 60px;
@@ -112,18 +117,6 @@ input[type="submit"]:focus {
   margin-top: 16px;
   width: 100%; }
 
-html,
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  margin: 0; }
-
-body * {
-  box-sizing: border-box; }
-
-#contenedorPrincipal {
-  background-color: #f9f9f9; }
-
 #contenedorMapa {
   margin: 73px auto 0;
   padding-top: 16px;
@@ -158,21 +151,6 @@ body * {
   padding: 0;
   text-indent: -9999px;
   width: 100%; }
-
-header {
-  background-color: #fff;
-  border-bottom: 3px solid #0e7bdd;
-  color: #FFF;
-  height: 73px;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1; }
-
-header img {
-  height: 60px;
-  margin: 5px 20px; }
 
 #lugares li .popup {
   background-color: #f1f1f1;

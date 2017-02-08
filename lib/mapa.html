@@ -19,7 +19,9 @@
 <body>
 <div id="contenedorPrincipal">
   <header>
-    <img src="http://electricon.com.mx/mapa/lib/img/logo-portal-web.png" alt="electricon">
+    <div class="logo-container">
+      <img src="http://electricon.com.mx/mapa/lib/img/logo-portal-web.png" alt="electricon">
+    </div>
     <?php if(isset($_SESSION['login_user'])) { ?>
     	<a class="user-options" href="logout.php">Log Out</a>
     <?php } else { ?>
