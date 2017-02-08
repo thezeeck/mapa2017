@@ -11,7 +11,7 @@ $host="localhost";
 $dbname="acoeoco_stands2016";
 $user="acoeoco_ad_stand";
 $pass="AdminE2016";
- 
+
 $connection = mysql_connect($host,$user,$pass);
 
 $db = mysql_select_db($dbname, $connection);
@@ -29,9 +29,9 @@ if($num_rows == 1){
 	$stand['reserved'] = $row['reserved'];
 
 	if($stand[$action_button] == '1'){
-		
+
 		$client = $action_button != 'available' ? $client : '';
-		
+
 		foreach ($places as $place) {
 		    mysql_query("update STANDS set status='$action_button',client='$client' WHERE id='$place'", $connection);
 		}
@@ -40,6 +40,7 @@ if($num_rows == 1){
 mysql_close($connection);
 header("location: profile.php");
 ?>
-<script type="text/javascript">  
+<script type="text/javascript">
+  console.log("hola");
 	console.log(<?php echo json_encode($_POST['places']); ?>);
 </script>
