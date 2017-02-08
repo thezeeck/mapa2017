@@ -1,19 +1,0 @@
-html,body {  font-family: arial, sans-serif;  font-size: 16px;  height: 100%;  margin: 0;}
-#contenedorPrincipal {  background-color: #f9f9f9;  height: 100%;}
-header {  background-color: #fff;  border-bottom: 3px solid #0e7bdd;  color: #FFF;  height: 70px;  left: 0;  position: fixed;  top: 0;  width: 100%;  z-index: 1;}
-header img {    height: 60px;    margin: 5px 20px;}
-
-.bg-login {  background-image: url('../img/bg-login.jpg');  background-position: center;  background-repeat: no-repeat;  background-size: cover;  filter: blur(5px);  height: 100%;  opacity: .75;}
-#login {  background-image: url('../img/bg-login.jpg');  background-size: cover;  box-shadow: 0 20px 30px rgba(0,0,0,.75);  height: 400px;  left: 50%;  margin: -200px 0 0 -350px;  position: absolute;  top: 50%;  width: 700px;}
-.formatter-login {  background-color: rgba(255,255,255,.9);  height: 100%;  text-align: center;  width: 50%;}
-.formatter-login img {  height: 50px;  margin: 16px 0 32px;}
-.formatter-login h2 {  font-family: signikabold, sans-serif;  font-weight: normal;  margin: 0 0 32px;}
-.input-wrapper label {  display: none;}
-.input-wrapper input[type="text"],.input-wrapper input[type="password"] {  background-color: transparent;  border-color: #c1c1c1;  border-style: solid;  border-width: 0 0 2px;  margin-bottom: 16px;  padding: 8px;  text-align: center;  transition: all .3s linear;  width: 80%;}
-.input-wrapper input[type="text"]:hover,.input-wrapper input[type="password"]:hover,.input-wrapper input[type="text"]:focus,.input-wrapper input[type="password"]:focus,.input-wrapper input[type="text"]:active,.input-wrapper input[type="password"]:active {  border-color: #0e7bdd;}
-.input-wrapper input[type="text"]:valid,.input-wrapper input[type="password"]:valid {  border-color: #0eddb4;}
-.input-wrapper input[type="text"]:invalid,.input-wrapper input[type="password"]:invalid {
-  border-color: #c1c1c1;}
-input[type="submit"] {  background-color: #0e7bdd;  background-image: none;  border: 0 none;  border-radius: 3px;  color: #fff;  font-family: signikabold, sans-serif;  font-size: 20px;  padding: 4px 16px;  transition: all .3s linear;}
-input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus {  background-color: #0e62ae;}
-.error {  display: inline-block;  margin-top: 16px;  width: 100%;}
