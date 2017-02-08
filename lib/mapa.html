@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="http://electricon.com.mx/mapa_interactivo/lib/css/mapa.css">
+  <title>Electricon</title>
+</head>
+<body>
+<div id="contenedorPrincipal">
+  <header>
+    <img src="http://electricon.com.mx/mapa_interactivo/lib/img/logo-portal-web.png" alt="electricon">
+    <?php if(isset($_SESSION['login_user'])) { ?>
+    	<a class="user-options" href="logout.php">Log Out</a>
+    <?php } else { ?>
+    	<a class="user-options" href="php/login.php">Login</a>
+    <?php } ?>
+    <span class="user-name"><?php echo $_SESSION['login_user']; ?></span>
+  </header>
+  <section id="contenedorMapa">
+    <img src="http://electricon.com.mx/mapa_interactivo/lib/img/electricon.png" alt="Electricon">
+    <ul id="lugares"></ul>
+  </section>
+</div>
+<div id="change">
+  <?php if($_SESSION['role_user'] == 'admin') { ?>
+    <form action="update_stands.php" method="post">
+      <input type="text" id="client" name="client" value="" placeholder="Clientes">
+      <input type="submit" id="reserved" name="action_button" value="reserved" class="hidden-content" disabled>
+      <input type="submit" id="sold" name="action_button" value="sold" class="hidden-content" disabled>
+      <input type="submit" id="available" name="action_button" value="available" class="hidden-content">
+      <input type="text" id="spaces" name="places" value="" class="hidden-content">
+      <label id="reservedLabel" for="reserved" class="like-button">Reservar</label>
+      <label id="soldLabel" for="sold" class="like-button">Vender</label>
+      <label id="available" for="available" class="like-button">Limpiar</label>
+    </form>
+  <?php } else if($_SESSION['role_user'] == 'vendor') { ?>
+    <form action="update_stands.php" method="post">
+      <input type="text" id="client" name="client" value="" placeholder="Clientes" required="">
+      <input type="submit" id="reserved" name="action_button" value="reserved" class="hidden-content">
+      <input type="submit" id="sold" name="action_button" value="sold" class="hidden-content">
+      <input type="text" id="spaces" name="places" value="" class="hidden-content">
+      <label for="reserved" class="like-button">Reservar</label>
+      <label for="sold" class="like-button">Vender</label>
+    </form>
+  <?php } else { ?>
+    <form action="http://electricon.com.mx/electricon/datos/" method="get">
+      <input id="solicitud" name="solicitud" value="" class="hidden-content">
+		  <button type="submit">Reservar</button>
+    </form>
+  <?php } ?>
+</div>
+<template id="mapItems">
+  <li id="">
+    <button></button>
+  </li>
+</template>
+<script type="text/javascript">
+  var userOptions = {'userName': <?php echo json_encode($_SESSION['login_user']); ?>, 'role': <?php echo json_encode($_SESSION['role_user']); ?>};
+  //document.write("estands = " + variablejs);
+</script>
+<script src="http://electricon.com.mx/mapa_interactivo/lib/js/mapa.js"></script>
+</body>
+</html>

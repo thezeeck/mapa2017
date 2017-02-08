@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+  
+  <link rel="stylesheet" type="text/css" href="http://electricon.com.mx/mapa_interactivo/lib/css/login.css">
+  <title>Electricon</title>
+</head>
+<body>
+  <div id="contenedorPrincipal">
+    <div class="bg-login"></div>
+    <section id="login">
+      <div class="formatter-login">
+        <img src="http://electricon.com.mx/mapa_interactivo/lib/img/logo-portal-web.png" alt="electricon">
+        <h2>Iniciar sesión</h2>
+        <form action="" method="post">
+          <div class="input-wrapper">
+            <label for="name">Usuario:</label>
+            <input id="name" name="username" placeholder="Usuario" type="text" required>
+          </div>
+          <div class="input-wrapper">
+            <label for="password">Password:</label>
+            <input id="password" name="password" placeholder="**********" type="password" required>
+          </div>
+          <input name="submit" type="submit" value=" Login ">
+          <span class="error"><?php echo $error; ?></span>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+</html>
