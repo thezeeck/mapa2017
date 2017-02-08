@@ -41,6 +41,5 @@ mysql_close($connection);
 header("location: profile.php");
 ?>
 <script type="text/javascript">
-  console.log("hola");
 	console.log(<?php echo json_encode($_POST['places']); ?>);
 </script>

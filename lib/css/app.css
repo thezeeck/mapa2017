@@ -11,24 +11,42 @@ body * {
 
 header {
   background-color: #31313C;
-  border-bottom: 3px solid #0e7bdd;
   color: #FFF;
-  height: 70px;
+  height: 100%;
   left: 0;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 200px;
   z-index: 1; }
-  header img {
-    height: 60px;
-    margin: 5px 20px; }
+  header .logo-container {
+    padding: 32px 16px 64px; }
+    header .logo-container img {
+      width: 100%; }
+  header .user-options {
+    padding: 4px 16px;
+    text-decoration: none;
+    transition: all .3s linear;
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    border-left: 4px solid transparent; }
+    header .user-options:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-left-color: #1BD5C1; }
+  header .user-name {
+    padding: 4px 16px;
+    font-size: 20px;
+    text-transform: uppercase; }
+
+#contenedorMapa {
+  margin: 16px 0 16px 200px;
+  padding: 16px;
+  position: relative;
+  width: calc(100% - 200px); }
 
 #contenedorPrincipal {
   height: 100%; }
-
-header img {
-  height: 60px;
-  margin: 5px 20px; }
 
 .bg-login {
   background-image: url("../img/bg-login.jpg");
@@ -117,12 +135,6 @@ input[type="submit"]:focus {
   margin-top: 16px;
   width: 100%; }
 
-#contenedorMapa {
-  margin: 73px auto 0;
-  padding-top: 16px;
-  position: relative;
-  width: 1000px; }
-
 #contenedorMapa > img {
   width: 100%; }
 
@@ -183,26 +195,6 @@ input[type="submit"]:focus {
 
 #lugares li:hover .popup {
   display: block; }
-
-.user-name {
-  color: #666;
-  float: right;
-  padding: 23px;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: bold; }
-
-.user-options {
-  background-color: #fff;
-  float: right;
-  padding: 25px;
-  text-decoration: none;
-  transition: all .3s linear;
-  cursor: pointer;
-  color: #666; }
-
-.user-options:hover {
-  background-color: #f1f1f1; }
 
 .available {
   background-color: transparent; }
