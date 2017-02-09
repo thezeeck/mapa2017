@@ -105,20 +105,86 @@ header {
 #A01 {
   bottom: 4.2%;
   width: 5.1%;
-  height: 2.65%;
-  left: 11.5%; }
+  height: 2.65%; }
 
 #A02 {
   bottom: 4.2%;
   width: 5.1%;
-  height: 2.65%;
-  left: 16.9%; }
+  height: 2.65%; }
 
 #A03 {
   bottom: 4.2%;
   width: 5.1%;
-  height: 2.65%;
+  height: 2.65%; }
+
+#A04 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A05 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A06 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A07 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A08 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A09 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A10,
+#A11 {
+  bottom: 4.2%;
+  width: 5.1%;
+  height: 2.65%; }
+
+#A01 {
+  left: 11.5%; }
+
+#A02 {
   left: 16.9%; }
+
+#A03 {
+  left: 22.33%; }
+
+#A04 {
+  left: 27.73%; }
+
+#A06 {
+  left: 33.13%; }
+
+#A07 {
+  left: 60.3%; }
+
+#A08 {
+  left: 65.7%; }
+
+#A09 {
+  left: 71.1%; }
+
+#A10 {
+  left: 76.5%; }
+
+#A11 {
+  left: 81.9%; }
+
+#A05 {
+  display: none !important; }
 
 #contenedorPrincipal {
   height: 100%; }
