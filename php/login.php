@@ -1,6 +1,6 @@
 <?php
-session_start(); 
-$error=''; 
+session_start();
+$error='';
 if (isset($_POST['submit'])) {
 	if (empty($_POST['username']) || empty($_POST['password'])) {
 		$error = "Usuario o password invalido";
@@ -10,9 +10,9 @@ if (isset($_POST['submit'])) {
 			$password=$_POST['password'];
 
 			$host="localhost";
-			$dbname="acoeoco_stands2016";
+			$dbname="acoeoco_stands2017";
 			$user="acoeoco_ad_stand";
-			$pass="AdminE2016";
+			$pass="AdminE2017";
 
 			$connection = mysql_connect($host,$user,$pass);
 
@@ -22,11 +22,11 @@ if (isset($_POST['submit'])) {
 			$password = mysql_real_escape_string($password);
 
 			$db = mysql_select_db($dbname, $connection);
-			
+
 			$query = "select role from USERS where password='$password' AND username='$username'";
 			$result = mysql_query($query, $connection);
 			$rows = mysql_num_rows($result);
-			
+
 			if ($rows == 1) {
 				$_SESSION['login_user']=$username;
 
@@ -34,11 +34,11 @@ if (isset($_POST['submit'])) {
 
 				$_SESSION['role_user'] = $row['role'];
 
-				header("location: profile.php"); 
+				header("location: profile.php");
 			} else {
 				$error = "Usuario o password invalido";
 			}
-			mysql_close($connection); 
+			mysql_close($connection);
 		}
 }
 

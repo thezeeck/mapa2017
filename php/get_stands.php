@@ -1,10 +1,10 @@
 <?php
 
 $host="localhost";
-$dbname="acoeoco_stands2016";
+$dbname="acoeoco_stands2017";
 $user="acoeoco_ad_stand";
-$pass="AdminE2016";
- 
+$pass="AdminE2017";
+
 $connection = mysql_connect($host,$user,$pass);
 
 $db = mysql_select_db($dbname, $connection);
@@ -26,10 +26,10 @@ if($num_rows > 0){
 		$stands[$index++] = $stand;
 	}
 }
-mysql_close($connection); 
+mysql_close($connection);
 
 ?>
 
-<script type="text/javascript">  
+<script type="text/javascript">
 	var places = <?php echo json_encode($stands); ?>;
 </script>
