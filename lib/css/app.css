@@ -60,6 +60,52 @@ header {
       position: absolute;
       top: 0;
       width: 100%; }
+      #contenedorMapa .map-container #lugares li {
+        display: block;
+        position: absolute; }
+        #contenedorMapa .map-container #lugares li:hover .popup {
+          display: block; }
+        #contenedorMapa .map-container #lugares li .transparent-button {
+          border: 0 none;
+          color: transparent;
+          cursor: pointer;
+          display: inline-block;
+          height: 100%;
+          padding: 0;
+          text-indent: -9999px;
+          width: 100%; }
+        #contenedorMapa .map-container #lugares li .popup {
+          background-color: #f1f1f1;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+          display: none;
+          font-weight: bold;
+          left: 0;
+          min-width: 100px;
+          padding: 8px 16px;
+          position: absolute;
+          text-align: center;
+          top: 100%;
+          width: auto;
+          z-index: 1; }
+          #contenedorMapa .map-container #lugares li .popup::before {
+            border-color: transparent transparent #fff;
+            border-style: solid;
+            border-width: 0 6px 6px;
+            content: "";
+            height: 0;
+            left: 5px;
+            position: absolute;
+            top: -6px;
+            width: 0; }
+          #contenedorMapa .map-container #lugares li .popup > img {
+            max-height: 150px;
+            max-width: 150px; }
+
+#A01 {
+  bottom: 4.2%;
+  width: 5%;
+  height: 2.7%;
+  left: 11.5%; }
 
 #contenedorPrincipal {
   height: 100%; }
@@ -150,57 +196,6 @@ input[type="submit"]:focus {
   display: inline-block;
   margin-top: 16px;
   width: 100%; }
-
-#contenedorMapa > img {
-  width: 100%; }
-
-#lugares li {
-  display: block;
-  height: 50px;
-  position: absolute;
-  width: 50px; }
-
-#lugares li .transparent-button {
-  border: 0 none;
-  color: transparent;
-  cursor: pointer;
-  display: inline-block;
-  height: 100%;
-  padding: 0;
-  text-indent: -9999px;
-  width: 100%; }
-
-#lugares li .popup {
-  background-color: #f1f1f1;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  display: none;
-  font-weight: bold;
-  left: 0;
-  min-width: 100px;
-  padding: 8px 16px;
-  position: absolute;
-  text-align: center;
-  top: 100%;
-  width: auto;
-  z-index: 1; }
-
-#lugares li .popup > img {
-  max-height: 150px;
-  max-width: 150px; }
-
-#lugares li .popup::before {
-  border-color: transparent transparent #fff;
-  border-style: solid;
-  border-width: 0 6px 6px;
-  content: "";
-  height: 0;
-  left: 5px;
-  position: absolute;
-  top: -6px;
-  width: 0; }
-
-#lugares li:hover .popup {
-  display: block; }
 
 .available {
   background-color: transparent; }
