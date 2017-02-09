@@ -1,275 +1,86 @@
-html,
-body {
-  background-color: #1E1E1E;
-  font-family: arial, sans-serif;
-  font-size: 16px;
-  height: 100%;
-  margin: 0; }
+/*
+Error: Invalid CSS after "...: rgba(255,255,": expected function argument, was ",255,.1);"
+        on line 86 of sass/app.scss
 
-body * {
-  box-sizing: border-box; }
+81:       width: 100%;
+82: 
+83:       li {
+84:         display: block;
+85:         position: absolute;
+86:         background-color: rgba(255,255,,255,.1);
+87: 
+88:         &:hover .popup {
+89:             display: block;
+90:         }
+91: 
 
-header {
-  background-color: #31313C;
-  color: #FFF;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 200px;
-  z-index: 1; }
-  header .logo-container {
-    padding: 32px 16px 64px; }
-    header .logo-container img {
-      width: 100%; }
-  header .user-options {
-    padding: 4px 16px;
-    text-decoration: none;
-    transition: all .3s linear;
-    cursor: pointer;
-    color: #fff;
-    display: inline-block;
-    width: 100%;
-    border-left: 4px solid transparent; }
-    header .user-options:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      border-left-color: #1BD5C1; }
-  header .user-name {
-    padding: 4px 16px;
-    font-size: 20px;
-    text-transform: uppercase; }
-
-#contenedorMapa {
-  margin: 0 0 0 200px;
-  padding: 32px 0;
-  position: relative;
-  width: calc(100% - 200px); }
-  #contenedorMapa .map-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto; }
-    #contenedorMapa .map-container img {
-      width: 100%; }
-    #contenedorMapa .map-container #lugares {
-      height: 100%;
-      left: 0;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 0;
-      width: 100%; }
-      #contenedorMapa .map-container #lugares li {
-        display: block;
-        position: absolute; }
-        #contenedorMapa .map-container #lugares li:hover .popup {
-          display: block; }
-        #contenedorMapa .map-container #lugares li .transparent-button {
-          border: 0 none;
-          color: transparent;
-          cursor: pointer;
-          display: inline-block;
-          height: 100%;
-          padding: 0;
-          text-indent: -9999px;
-          width: 100%; }
-        #contenedorMapa .map-container #lugares li .popup {
-          background-color: #f1f1f1;
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-          display: none;
-          font-weight: bold;
-          left: 0;
-          min-width: 100px;
-          padding: 8px 16px;
-          position: absolute;
-          text-align: center;
-          top: 100%;
-          width: auto;
-          z-index: 1; }
-          #contenedorMapa .map-container #lugares li .popup::before {
-            border-color: transparent transparent #fff;
-            border-style: solid;
-            border-width: 0 6px 6px;
-            content: "";
-            height: 0;
-            left: 5px;
-            position: absolute;
-            top: -6px;
-            width: 0; }
-          #contenedorMapa .map-container #lugares li .popup > img {
-            max-height: 150px;
-            max-width: 150px; }
-
-#A01 {
-  bottom: 4.2%;
-  width: 5%;
-  height: 2.7%;
-  left: 11.5%; }
-
-#contenedorPrincipal {
-  height: 100%; }
-
-.bg-login {
-  background-image: url("../img/bg-login.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(5px);
-  height: 100%;
-  opacity: .75; }
-
-#login {
-  background-image: url("../img/bg-login.jpg");
-  background-size: cover;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.75);
-  height: 400px;
-  left: 50%;
-  margin: -200px 0 0 -350px;
-  position: absolute;
-  top: 50%;
-  width: 700px; }
-
-.formatter-login {
-  background-color: rgba(255, 255, 255, 0.9);
-  height: 100%;
-  text-align: center;
-  width: 50%; }
-
-.formatter-login img {
-  height: 50px;
-  margin: 16px 0 32px; }
-
-.formatter-login h2 {
-  font-family: signikabold, sans-serif;
-  font-weight: normal;
-  margin: 0 0 32px; }
-
-.input-wrapper label {
-  display: none; }
-
-.input-wrapper input[type="text"],
-.input-wrapper input[type="password"] {
-  background-color: transparent;
-  border-color: #c1c1c1;
-  border-style: solid;
-  border-width: 0 0 2px;
-  margin-bottom: 16px;
-  padding: 8px;
-  text-align: center;
-  transition: all .3s linear;
-  width: 80%; }
-
-.input-wrapper input[type="text"]:hover,
-.input-wrapper input[type="password"]:hover,
-.input-wrapper input[type="text"]:focus,
-.input-wrapper input[type="password"]:focus,
-.input-wrapper input[type="text"]:active,
-.input-wrapper input[type="password"]:active {
-  border-color: #0e7bdd; }
-
-.input-wrapper input[type="text"]:valid,
-.input-wrapper input[type="password"]:valid {
-  border-color: #0eddb4; }
-
-.input-wrapper input[type="text"]:invalid,
-.input-wrapper input[type="password"]:invalid {
-  border-color: #c1c1c1; }
-
-input[type="submit"] {
-  background-color: #0e7bdd;
-  background-image: none;
-  border: 0 none;
-  border-radius: 3px;
-  color: #fff;
-  font-family: signikabold, sans-serif;
-  font-size: 20px;
-  padding: 4px 16px;
-  transition: all .3s linear; }
-
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-  background-color: #0e62ae; }
-
-.error {
-  display: inline-block;
-  margin-top: 16px;
-  width: 100%; }
-
-.available {
-  background-color: transparent; }
-
-.sold {
-  background-color: rgba(0, 149, 67, 0.3); }
-
-.reserved {
-  background-color: rgba(20, 20, 20, 0.3); }
-
-.select-item {
-  background-color: rgba(10, 100, 200, 0.5); }
-
-#change {
-  background-color: #0d3e63;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  height: 50px;
-  left: 0;
-  opacity: 0;
-  padding: 12px 16px;
-  position: fixed;
-  text-align: right;
-  top: 63px;
-  transition: all 0.3s linear 0s;
-  width: 100%;
-  z-index: -1; }
-
-#change form {
-  display: inline-block;
-  height: 100%;
-  margin: 0;
-  vertical-align: top; }
-
-#change .like-button {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 0 none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  margin-left: 10px;
-  padding: 3px 10px 5px;
-  transition: all 0.3s linear 0s;
-  vertical-align: top; }
-
-#change .like-button:hover {
-  background-color: rgba(255, 255, 255, 0.4); }
-
-#change input[type="text"] {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 0 none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 14px;
-  padding: 4px 10px;
-  transition: all 0.3s linear 0s;
-  width: 200px; }
-
-#change input[type="text"]:hover,
-#change input[type="text"]:focus {
-  background-color: rgba(0, 0, 0, 0.4); }
-
-#change.active-options {
-  opacity: 1;
-  transform: translate(0px, 10px);
-  z-index: 1; }
-
-#change #reserved:disabled ~ #reservedLabel,
-#change #sold:disabled ~ #soldLabel {
-  cursor: not-allowed;
-  opacity: 0.5; }
-
-.hidden-content {
-  display: none !important; }
-
-/*# sourceMappingURL=app.css.map */
+Backtrace:
+sass/app.scss:86
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/lexer.rb:229:in `expected!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:710:in `assert_expr'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:619:in `block in arglist'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:593:in `loop'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:593:in `arglist'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:578:in `fn_arglist'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:540:in `funcall'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:520:in `ident'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_not'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_div'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_minus'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_plus'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `times_div_or_mod'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `plus_or_minus'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `relational'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `eq_or_neq'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `and_expr'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `or_expr'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:494:in `space'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:434:in `interpolation'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:359:in `expr'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:708:in `assert_expr'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:75:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1063:in `sass_script'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:909:in `value!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:778:in `block in try_declaration'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1183:in `rethrow'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:791:in `try_declaration'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...: rgba(255,255,\": expected function argument, was \",255,.1);\"\A         on line 86 of sass/app.scss\A \A 81:       width: 100%;\A 82: \A 83:       li {\A 84:         display: block;\A 85:         position: absolute;\A 86:         background-color: rgba(255,255,,255,.1);\A 87: \A 88:         &:hover .popup {\A 89:             display: block;\A 90:         }\A 91: "; }
