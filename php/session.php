@@ -3,10 +3,14 @@
 session_start();
 
 $host="localhost";
-$dbname="acoeoco_stands2017";
+$dbname="acoeoco_stands2016";
 $user="acoeoco_ad_stand";
 $pass="AdminE2016";
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> parent of 68f1f19... Usuario y  password nuevos
 $connection = mysql_connect($host,$user,$pass);
 
 $db = mysql_select_db($dbname, $connection);
