@@ -5,7 +5,7 @@ session_start();
 $host="localhost";
 $dbname="acoeoco_stands2017";
 $user="acoeoco_ad_stand";
-$pass="AdminE2017";
+$pass="AdminE2016";
 
 $connection = mysql_connect($host,$user,$pass);
 
