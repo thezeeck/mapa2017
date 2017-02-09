@@ -8,7 +8,7 @@ $role_user = $_SESSION['role_user'];
 $login_user = $_SESSION['login_user'];
 
 $host="localhost";
-$dbname="acoeoco_stands2017";
+$dbname="acoeoco_stands2016";
 $user="acoeoco_ad_stand";
 $pass="AdminE2016";
 

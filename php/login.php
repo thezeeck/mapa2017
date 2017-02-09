@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 			$password=$_POST['password'];
 
 			$host="localhost";
-			$dbname="acoeoco_stands2017";
+			$dbname="acoeoco_stands2016";
 			$user="acoeoco_ad_stand";
 			$pass="AdminE2016";
 
