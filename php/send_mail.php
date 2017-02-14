@@ -26,8 +26,12 @@ $email_message .= "Teléfono: " . $_POST['telephone'] . "\n\n";
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
+$bool = mail($email_to, $email_subject, $email_message, $headers);
 
-echo "¡La solicitud ha sido enviado!";
+if($bool)
+    echo "La solicitud ha sido enviada";
+else
+    echo "Error correo no enviado";
+
 }
 ?>
