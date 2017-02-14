@@ -17,7 +17,7 @@ die();
 
 $email_message = "Solicitud: " . $_POST['solicitud'] . "\n";
 $email_message .= "Empresa: " . $_POST['empresa'] . "\n";
-$email_message .= "E-mail: " . $_POST['email'] . "\n";
+$email_message .= "Correo electrónico: " . $_POST['email'] . "\n";
 $email_message .= "Nombre: " . $_POST['nombre'] . "\n";
 $email_message .= "Teléfono: " . $_POST['telephone'] . "\n\n";
 
