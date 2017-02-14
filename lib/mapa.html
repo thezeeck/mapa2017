@@ -29,44 +29,44 @@
     	<a class="user-options" href="php/login.php">Login</a>
     <?php } ?>
   </header>
+  <div id="change">
+    <?php if($_SESSION['role_user'] == 'admin') { ?>
+      <form action="update_stands.php" method="post">
+        <input type="text" id="client" name="client" value="" placeholder="Clientes">
+        <input type="submit" id="reserved" name="action_button" value="reserved" class="hidden-content" disabled>
+        <input type="submit" id="sold" name="action_button" value="sold" class="hidden-content" disabled>
+        <input type="submit" id="available" name="action_button" value="available" class="hidden-content">
+        <input type="text" id="spaces" name="places" value="" class="hidden-content">
+        <label id="reservedLabel" for="reserved" class="like-button">Reservar</label>
+        <label id="soldLabel" for="sold" class="like-button">Vender</label>
+        <label id="available" for="available" class="like-button">Limpiar</label>
+      </form>
+    <?php } else if($_SESSION['role_user'] == 'vendor') { ?>
+      <form action="update_stands.php" method="post">
+        <input type="text" id="client" name="client" value="" placeholder="Clientes" required="">
+        <input type="submit" id="reserved" name="action_button" value="reserved" class="hidden-content">
+        <input type="submit" id="sold" name="action_button" value="sold" class="hidden-content">
+        <input type="text" id="spaces" name="places" value="" class="hidden-content">
+        <label for="reserved" class="like-button">Reservar</label>
+        <label for="sold" class="like-button">Vender</label>
+      </form>
+    <?php } else { ?>
+      <form id="contactForm" action="http://electricon.com.mx/mapa/php/send_mail.php" method="post">
+        <input id="solicitud" name="solicitud" value="" class="hidden-content" required>
+        <input type="text" name="empresa" value="" placeholder="Empresa" required>
+        <input type="text" name="nombre" value="" placeholder="Nombre de contacto" required>
+        <input type="email" name="email" value="" placeholder="E-Mail" required>
+        <input type="text" name="telefono" value="" placeholder="Teléfono" required>
+  		  <button type="submit">Reservar</button>
+      </form>
+    <?php } ?>
+  </div>
   <section id="contenedorMapa">
     <div class="map-container">
       <img src="http://electricon.com.mx/mapa/lib/img/map.jpg" alt="Electricon">
       <ul id="lugares"></ul>
     </div>
   </section>
-</div>
-<div id="change">
-  <?php if($_SESSION['role_user'] == 'admin') { ?>
-    <form action="update_stands.php" method="post">
-      <input type="text" id="client" name="client" value="" placeholder="Clientes">
-      <input type="submit" id="reserved" name="action_button" value="reserved" class="hidden-content" disabled>
-      <input type="submit" id="sold" name="action_button" value="sold" class="hidden-content" disabled>
-      <input type="submit" id="available" name="action_button" value="available" class="hidden-content">
-      <input type="text" id="spaces" name="places" value="" class="hidden-content">
-      <label id="reservedLabel" for="reserved" class="like-button">Reservar</label>
-      <label id="soldLabel" for="sold" class="like-button">Vender</label>
-      <label id="available" for="available" class="like-button">Limpiar</label>
-    </form>
-  <?php } else if($_SESSION['role_user'] == 'vendor') { ?>
-    <form action="update_stands.php" method="post">
-      <input type="text" id="client" name="client" value="" placeholder="Clientes" required="">
-      <input type="submit" id="reserved" name="action_button" value="reserved" class="hidden-content">
-      <input type="submit" id="sold" name="action_button" value="sold" class="hidden-content">
-      <input type="text" id="spaces" name="places" value="" class="hidden-content">
-      <label for="reserved" class="like-button">Reservar</label>
-      <label for="sold" class="like-button">Vender</label>
-    </form>
-  <?php } else { ?>
-    <form id="contactForm">
-      <input id="solicitud" name="solicitud" value="" class="hidden-content" required>
-      <input type="text" name="Empresa" value="" placeholder="Empresa" required>
-      <input type="text" name="Nombre de contacto" value="" placeholder="Nombre de contacto" required>
-      <input type="email" name="E-Mail" value="" placeholder="E-Mail" required>
-      <input type="text" name="Teléfono" value="" placeholder="Teléfono" required>
-		  <button id="submitContact" type="button">Reservar</button>
-    </form>
-  <?php } ?>
 </div>
 <template id="mapItems">
   <li id="">
@@ -76,6 +76,7 @@
 <script type="text/javascript">
   var userOptions = {'userName': <?php echo json_encode($_SESSION['login_user']); ?>, 'role': <?php echo json_encode($_SESSION['role_user']); ?>};
 </script>
+<script src="http://electricon.com.mx/mapa/lib/js/jquery.js"></script>
 <script src="http://electricon.com.mx/mapa/lib/js/mapa.js"></script>
 </body>
 </html>

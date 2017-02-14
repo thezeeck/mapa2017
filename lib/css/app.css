@@ -102,6 +102,54 @@ header {
             max-height: 150px;
             max-width: 150px; }
 
+#change {
+  background-color: #22222D;
+  left: 200px;
+  opacity: 0;
+  padding: 156px 16px 12px;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s linear .3s;
+  width: 0px;
+  z-index: 1;
+  height: 100%; }
+  #change.active-options {
+    opacity: 1;
+    transition: all 0.3s linear;
+    width: 200px; }
+    #change.active-options form {
+      transition: all 0.3s linear .3s;
+      opacity: 1;
+      transform: translate(0px, 0px); }
+  #change form {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    transition: all 0.3s linear;
+    opacity: 0;
+    transform: translate(0px, -10px); }
+    #change form input:not([type=submit]) {
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 0 none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      padding: 4px 10px;
+      transition: all 0.3s linear 0s;
+      width: 100%;
+      margin-bottom: 16px; }
+    #change form button {
+      background-color: transparent;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      padding: 4px 10px;
+      transition: all 0.3s linear 0s;
+      width: 100%;
+      margin-bottom: 16px;
+      border: 1px solid;
+      cursor: pointer; }
+
 #A01 {
   bottom: 4.2%;
   width: 5.1%;
@@ -187,7 +235,7 @@ header {
   display: none !important; }
 
 #contenedorPrincipal {
-  height: 100%; }
+  position: relative; }
 
 .bg-login {
   background-image: url("../img/bg-login.jpg");
@@ -288,26 +336,6 @@ input[type="submit"]:focus {
 .select-item {
   background-color: rgba(10, 100, 200, 0.5); }
 
-#change {
-  background-color: #0d3e63;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  height: 50px;
-  left: 0;
-  opacity: 0;
-  padding: 12px 16px;
-  position: fixed;
-  text-align: right;
-  top: 63px;
-  transition: all 0.3s linear 0s;
-  width: 100%;
-  z-index: -1; }
-
-#change form {
-  display: inline-block;
-  height: 100%;
-  margin: 0;
-  vertical-align: top; }
-
 #change .like-button {
   background-color: rgba(255, 255, 255, 0.25);
   border: 0 none;
@@ -324,24 +352,9 @@ input[type="submit"]:focus {
 #change .like-button:hover {
   background-color: rgba(255, 255, 255, 0.4); }
 
-#change input[type="text"] {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 0 none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 14px;
-  padding: 4px 10px;
-  transition: all 0.3s linear 0s;
-  width: 200px; }
-
 #change input[type="text"]:hover,
 #change input[type="text"]:focus {
   background-color: rgba(0, 0, 0, 0.4); }
-
-#change.active-options {
-  opacity: 1;
-  transform: translate(0px, 10px);
-  z-index: 1; }
 
 #change #reserved:disabled ~ #reservedLabel,
 #change #sold:disabled ~ #soldLabel {
