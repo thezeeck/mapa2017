@@ -58,9 +58,13 @@
       <label for="sold" class="like-button">Vender</label>
     </form>
   <?php } else { ?>
-    <form action="http://electricon.com.mx/electricon/datos/" method="get">
-      <input id="solicitud" name="solicitud" value="" class="hidden-content">
-		  <button type="submit">Reservar</button>
+    <form id="contactForm">
+      <input id="solicitud" name="solicitud" value="" class="hidden-content" required>
+      <input type="text" name="Empresa" value="" placeholder="Empresa" required>
+      <input type="text" name="Nombre de contacto" value="" placeholder="Nombre de contacto" required>
+      <input type="email" name="E-Mail" value="" placeholder="E-Mail" required>
+      <input type="text" name="Teléfono" value="" placeholder="Teléfono" required>
+		  <button id="submitContact" type="button">Reservar</button>
     </form>
   <?php } ?>
 </div>
