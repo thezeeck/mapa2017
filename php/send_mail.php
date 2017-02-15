@@ -31,9 +31,7 @@ $bool = mail($email_to, $email_subject, $email_message, $headers);
 if($bool)
     header('Location: ../lib/mapa.html?response=success');
 else
-    //include('../lib/mapa.html?response=error');
-    //header('Location: ../index.php');
-    header('Location: ../index.php');
+    header('Location: ../lib/mapa.html?response=error');
 
 }
 ?>
