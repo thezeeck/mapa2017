@@ -29,9 +29,9 @@ $headers = 'From: '.$email_from."\r\n".
 $bool = mail($email_to, $email_subject, $email_message, $headers);
 
 if($bool)
-    echo "La solicitud ha sido enviada";
+    include('../lib/mapa.html?response=success');
 else
-    echo "Error correo no enviado";
+    include('../lib/mapa.html?response=error');
 
 }
 ?>
