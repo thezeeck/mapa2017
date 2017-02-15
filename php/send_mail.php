@@ -19,7 +19,7 @@ $email_message = "Solicitud: " . $_POST['solicitud'] . "\n";
 $email_message .= "Empresa: " . $_POST['empresa'] . "\n";
 $email_message .= "Correo electrónico: " . $_POST['email'] . "\n";
 $email_message .= "Nombre: " . $_POST['nombre'] . "\n";
-$email_message .= "Teléfono: " . $_POST['telephone'] . "\n\n";
+$email_message .= "Teléfono: " . $_POST['telefono'] . "\n\n";
 
 
 // Ahora se envía el e-mail usando la función mail() de PHP
@@ -29,7 +29,7 @@ $headers = 'From: '.$email_from."\r\n".
 $bool = mail($email_to, $email_subject, $email_message, $headers);
 
 if($bool)
-    include('../lib/mapa.html?response=success');
+    header('Location: ../lib/mapa.html?response=success');
 else
     //include('../lib/mapa.html?response=error');
     //header('Location: ../index.php');
