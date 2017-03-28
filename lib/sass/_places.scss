@@ -1,46 +1,286 @@
-@for $i from 1 through 9 {
-  #A0#{$i} {
-    bottom: 4.2%;
-    width: 5.1%;
-    height: 2.65%;
+@for $i from 1 through 11 {
+  @if $i < 10 {
+    #A0#{$i} {
+      bottom: 78px;
+      width: 42px;
+      height: 38px;
+
+      @if $i == 1 {
+        left: 89px;
+      } @else if $i == 6 {
+        left: 45px + (($i - 1) * 44);
+      } @else if $i > 6 {
+        left: 171px + ($i * 44);
+      } @else {
+        left: 45px + ($i * 44);
+      }
+    }
+  } @else {
+    #A#{$i} {
+      bottom: 78px;
+      width: 42px;
+      height: 38px;
+      left: 171px + ($i * 44);
+    }
   }
-}
-#A10,
-#A11 {
-  bottom: 4.2%;
-  width: 5.1%;
-  height: 2.65%;
-}
-#A01 {
-  left: 11.5%;
-}
-#A02 {
-  left: 16.9%;
-}
-#A03 {
-  left: 22.33%;
-}
-#A04 {
-  left: 27.73%;
-}
-#A06 {
-  left: 33.13%;
-}
-#A07 {
-  left: 60.3%;
-}
-#A08 {
-  left: 65.7%;
-}
-#A09 {
-  left: 71.1%;
-}
-#A10 {
-  left: 76.5%;
-}
-#A11 {
-  left: 81.9%;
 }
 #A05 {
   display: none !important;
+}
+@for $i from 1 through 11 {
+  @if $i < 10 {
+    #B0#{$i},
+    #C0#{$i},
+    #E0#{$i},
+    #F0#{$i} {
+      width: 42px;
+      height: 40px;
+      @if $i == 1 {
+        left: 3px;
+        width: 40px;
+      } @else if $i > 1 and $i < 4 {
+        left: 1px + ($i * 44);
+      } @else if $i > 3 and $i < 6 {
+        left: 89px + ($i * 44);
+      } @else if $i > 5 and $i < 8 {
+        left: 171px + ($i * 44);
+      } @else if $i > 7 and $i < 10 {
+        left: 259px + ($i * 44);
+      }
+    }
+    #B0#{$i} {
+      bottom: 163px;
+    }
+    #C0#{$i} {
+      bottom: 205px;
+    }
+    #E0#{$i} {
+      bottom: 289px;
+    }
+    #F0#{$i} {
+      bottom: 331px;
+    }
+  } @else {
+    #B#{$i},
+    #C#{$i},
+    #E#{$i},
+    #F#{$i} {
+      width: 40px;
+      height: 40px;
+      left: 303px + ($i * 44);
+    }
+    #B#{$i} {
+      bottom: 163px;
+    }
+    #C#{$i} {
+      bottom: 205px;
+    }
+    #E#{$i} {
+      bottom: 289px;
+    }
+    #F#{$i} {
+      bottom: 331px;
+    }
+  }
+}
+#D01,
+#D02 {
+  width: 40px;
+  height: 40px;
+  left: 3px;
+  bottom: 247px;
+}
+#D02 {
+  left: 743px;
+}
+@for $i from 1 through 12 {
+  @if $i < 10 {
+    #G0#{$i},
+    #H0#{$i} {
+      width: 42px;
+      height: 40px;
+      @if $i < 3 {
+        left: 3px + (($i - 1) * 44);
+      } @else if $i > 2 and $i < 5 {
+        left: 1px + ($i * 44);
+      } @else if $i > 4 and $i < 7 {
+        left: 45px + ($i * 44);
+      } @else if $i > 6 and $i < 9 {
+        left: 127px + ($i * 44);
+      } @else {
+        left: 171px + ($i * 44);
+      }
+    }
+    #G0#{$i} {
+      bottom: 424px;
+    }
+    #H0#{$i} {
+      bottom: 466px;
+    }
+  } @else {
+    #G#{$i},
+    #H#{$i} {
+      width: 42px;
+      height: 40px;
+      @if $i < 11 {
+        left: 171px + ($i * 44);
+      } @else {
+        left: 227px + ($i * 44);
+      }
+    }
+    #G#{$i} {
+      bottom: 424px;
+    }
+    #H#{$i} {
+      bottom: 466px;
+    }
+  }
+}
+#RF01,
+#RF02 {
+  height: 127px;
+  top: 456px;
+  width: 85px;
+  left: 90px;
+}
+#RF02 {
+  left: 612px;
+}
+@for $i from 3 through 6 {
+  #RF0#{$i} {
+    width: 126px;
+    top: 626px;
+    height: 84px;
+    left: 46px;
+  }
+}
+#RF04 {
+  left: 221px;
+}
+#RF05 {
+  left: 439px;
+}
+#RF06 {
+  left: 613px;
+}
+@for $i from 7 through 12 {
+  @if $i < 10 {
+    #RF0#{$i} {
+      width: 86px;
+      top: 759px;
+      height: 82px;
+    }
+
+  } @else {
+    #RF#{$i} {
+      top: 759px;
+      width: 86px;
+      height: 82px;
+    }
+  }
+}
+#RF13,
+#RF14,
+#RF15A,
+#RF15B,
+#RF16A,
+#RF16B,
+#RF17,
+#RF18 {
+  width: 86px;
+  top: 890px;
+  height: 82px;
+}
+#RF07,
+#RF13 {
+  left: 3px;
+}
+#RF08,
+#RF14 {
+  left: 133px;
+}
+#RF11,
+#RF17 {
+  left: 567px;
+}
+#RF12,
+#RF18 {
+  left: 711px;
+}
+#RF15A,
+#RF15B,
+#RF16A,
+#RF16B {
+  width: 42px;
+}
+#RF09,
+#RF15A {
+  left: 265px;
+}
+#RF15B {
+  left: 309px;
+}
+#RF10,
+#RF16A {
+  left: 435px;
+}
+#RF16B {
+  left: 479px;
+}
+@for $i from 1 through 18 {
+  #M#{$i} {
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+
+    @if $i < 7 {
+      left: 6px;
+      top: 558px - (($i - 1) * 50);
+    } @else if $i > 6 and $i < 10 {
+      left: 6px + (($i - 6) * 50);
+      top: 308px;
+    } @else if $i > 9 and $i < 14 {
+      left: 542px + (($i - 9) * 50);
+      top: 308px;
+    } @else {
+      left: 742px;
+      top: 408px + (($i - 15) * 50);
+    }
+  }
+}
+
+#AX,
+#AY {
+  bottom: 78px;
+  width: 84px;
+  height: 83px;
+
+  &::before {
+    content: "";
+    width: 42px;
+    height: 43px;
+    position: absolute;
+    top: 0;
+    background-color: $secondary-dark;
+    border-style: solid;
+    border-color: $secondary-light;
+  }
+}
+
+#AX {
+  left: 3px;
+
+  &::before {
+    border-width: 0 0 2px 2px;
+    right: 0;
+  }
+}
+
+#AY {
+  right: 17px;
+
+  &::before {
+    border-width: 0 2px 2px 0;
+    left: 0;
+  }
 }
