@@ -1,8 +1,9 @@
 <?php
 if(isset($_POST['email'])) {
 
-$email_to = $_POST['email'];
-//'expo@electricon.com.mx';
+$email_to = 'expo@electricon.com.mx';
+// $_POST['email'];
+
 $email_subject = "Solicitud de reserva";
 
 // Validar los datos ingresados por el usuario
