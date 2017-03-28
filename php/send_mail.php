@@ -2,6 +2,7 @@
 if(isset($_POST['email'])) {
 
 $email_to = $_POST['email'];
+//'expo@electricon.com.mx';
 $email_subject = "Solicitud de reserva";
 
 // Validar los datos ingresados por el usuario
@@ -19,7 +20,7 @@ $email_message = "Solicitud: " . $_POST['solicitud'] . "\n";
 $email_message .= "Empresa: " . $_POST['empresa'] . "\n";
 $email_message .= "Correo electrónico: " . $_POST['email'] . "\n";
 $email_message .= "Nombre: " . $_POST['nombre'] . "\n";
-$email_message .= "Teléfono: " . $_POST['telephone'] . "\n\n";
+$email_message .= "Teléfono: " . $_POST['telefono'] . "\n\n";
 
 
 // Ahora se envía el e-mail usando la función mail() de PHP
@@ -29,9 +30,9 @@ $headers = 'From: '.$email_from."\r\n".
 $bool = mail($email_to, $email_subject, $email_message, $headers);
 
 if($bool)
-    echo "La solicitud ha sido enviada";
+    header('Location: ../index.php?response=success');
 else
-    echo "Error correo no enviado";
+    header('Location: ../index.php?response=error');
 
 }
 ?>
