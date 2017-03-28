@@ -1,3 +1,17 @@
+#change form button, #change .like-button {
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 10px;
+  transition: all 0.3s linear 0s;
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center; }
+
 html,
 body {
   background-color: #1E1E1E;
@@ -76,9 +90,13 @@ header {
           cursor: pointer;
           display: inline-block;
           height: 100%;
-          padding: 0;
-          text-indent: -9999px;
-          width: 100%; }
+          padding: 4px;
+          width: 100%;
+          overflow: hidden; }
+          #contenedorMapa .map-container #lugares li .transparent-button img {
+            width: auto;
+            max-height: 100%;
+            max-width: 100%; }
         #contenedorMapa .map-container #lugares li .popup {
           background-color: #f1f1f1;
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
@@ -116,17 +134,30 @@ header {
   z-index: 2; }
   .dialog section {
     width: 500px;
-    height: 100px;
+    height: 135px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -50px 0 0 -250px;
+    margin: -67px 0 0 -250px;
     background-color: #31313C;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    padding: 16px; }
+    padding: 16px;
+    color: #fff; }
     .dialog section .button-section {
-      text-align: right; }
+      text-align: right;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15); }
+      .dialog section .button-section button {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        padding: 2px 8px 4px;
+        cursor: pointer; }
+        .dialog section .button-section button:hover, .dialog section .button-section button:focus, .dialog section .button-section button:active {
+          background-color: rgba(255, 255, 255, 0.3); }
 
 #change {
   background-color: #22222D;
@@ -164,17 +195,6 @@ header {
       transition: all 0.3s linear 0s;
       width: 100%;
       margin-bottom: 16px; }
-    #change form button {
-      background-color: transparent;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 14px;
-      padding: 4px 10px;
-      transition: all 0.3s linear 0s;
-      width: 100%;
-      margin-bottom: 16px;
-      border: 1px solid;
-      cursor: pointer; }
 
 #A01 {
   bottom: 78px;
@@ -600,7 +620,7 @@ header {
 #H11 {
   width: 42px;
   height: 40px;
-  left: 711px; }
+  left: 697px; }
 
 #G11 {
   bottom: 424px; }
@@ -612,7 +632,7 @@ header {
 #H12 {
   width: 42px;
   height: 40px;
-  left: 755px; }
+  left: 741px; }
 
 #G12 {
   bottom: 424px; }
@@ -719,7 +739,7 @@ header {
 
 #RF12,
 #RF18 {
-  left: 711px; }
+  left: 697px; }
 
 #RF15A,
 #RF15B,
@@ -895,18 +915,6 @@ header {
     border-width: 0 2px 2px 0;
     left: 0; }
 
-#contenedorPrincipal {
-  position: relative; }
-
-.bg-login {
-  background-image: url("../img/bg-login.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(5px);
-  height: 100%;
-  opacity: .75; }
-
 #login {
   background-image: url("../img/bg-login.jpg");
   background-size: cover;
@@ -932,6 +940,10 @@ header {
   font-family: signikabold, sans-serif;
   font-weight: normal;
   margin: 0 0 32px; }
+
+#contenedorPrincipal {
+  position: relative;
+  height: 100%; }
 
 .input-wrapper label {
   display: none; }
@@ -989,26 +1001,13 @@ input[type="submit"]:focus {
   background-color: transparent; }
 
 .sold {
-  background-color: rgba(0, 149, 67, 0.3); }
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .reserved {
-  background-color: rgba(20, 20, 20, 0.3); }
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .select-item {
-  background-color: rgba(10, 100, 200, 0.5); }
-
-#change .like-button {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 0 none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  margin-left: 10px;
-  padding: 3px 10px 5px;
-  transition: all 0.3s linear 0s;
-  vertical-align: top; }
+  background-color: rgba(131, 225, 248, 0.5); }
 
 #change .like-button:hover {
   background-color: rgba(255, 255, 255, 0.4); }

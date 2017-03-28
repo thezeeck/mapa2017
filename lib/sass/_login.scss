@@ -1,0 +1,29 @@
+#login {
+  background-image: url('../img/bg-login.jpg');
+  background-size: cover;
+  box-shadow: 0 20px 30px rgba(0,0,0,.75);
+  height: 400px;
+  left: 50%;
+  margin: -200px 0 0 -350px;
+  position: absolute;
+  top: 50%;
+  width: 700px;
+}
+
+.formatter-login {
+  background-color: rgba(255,255,255,.9);
+  height: 100%;
+  text-align: center;
+  width: 50%;
+}
+
+.formatter-login img {
+  height: 50px;
+  margin: 16px 0 32px;
+}
+
+.formatter-login h2 {
+  font-family: signikabold, sans-serif;
+  font-weight: normal;
+  margin: 0 0 32px;
+}

@@ -101,9 +101,15 @@ header {
           cursor: pointer;
           display: inline-block;
           height: 100%;
-          padding: 0;
-          text-indent: -9999px;
+          padding: 4px;
           width: 100%;
+          overflow: hidden;
+
+          img {
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+          }
         }
 
         .popup {
@@ -153,18 +159,37 @@ header {
 
   section {
     width: 500px;
-    height: 100px;
+    height: 135px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -50px 0 0 -250px;
+    margin: -67px 0 0 -250px;
     background-color: $secondary-light;
-    box-shadow: 0 0 10px rgba(#fff, .75);
+    box-shadow: 0 0 10px rgba(#fff, .5);
     border-radius: 5px;
     padding: 16px;
+    color: #fff;
 
     .button-section {
       text-align: right;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(#fff, 0.15);
+
+      button {
+        color: #fff;
+        background-color: rgba(#fff, 0.15);
+        border: 1px solid rgba(#fff, 0.3);
+        border-radius: 5px;
+        padding: 2px 8px 4px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: rgba(#fff, 0.3);
+        }
+      }
     }
   }
 }
@@ -214,64 +239,18 @@ header {
     }
 
     button {
-      background-color: transparent;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 14px;
-      padding: 4px 10px;
-      transition: all 0.3s linear 0s;
-      width: 100%;
-      margin-bottom: 16px;
-      border: 1px solid;
-      cursor: pointer;
+      @extend %button;
     }
   }
 }
 
 @import "places";
 
+@import "login";
+
 #contenedorPrincipal {
   position: relative;
-}
-
-.bg-login {
-  background-image: url('../img/bg-login.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(5px);
   height: 100%;
-  opacity: .75;
-}
-
-#login {
-  background-image: url('../img/bg-login.jpg');
-  background-size: cover;
-  box-shadow: 0 20px 30px rgba(0,0,0,.75);
-  height: 400px;
-  left: 50%;
-  margin: -200px 0 0 -350px;
-  position: absolute;
-  top: 50%;
-  width: 700px;
-}
-
-.formatter-login {
-  background-color: rgba(255,255,255,.9);
-  height: 100%;
-  text-align: center;
-  width: 50%;
-}
-
-.formatter-login img {
-  height: 50px;
-  margin: 16px 0 32px;
-}
-
-.formatter-login h2 {
-  font-family: signikabold, sans-serif;
-  font-weight: normal;
-  margin: 0 0 32px;
 }
 
 .input-wrapper label {
@@ -339,29 +318,19 @@ input[type="submit"]:focus {
 }
 
 .sold {
-    background-color: rgba(0,149,67,.30);
+    background-color: rgba(#fff, 0.20);
 }
 
 .reserved {
-    background-color: rgba(20,20,20,.3);
+    background-color: rgba(#000,.3);
 }
 
 .select-item {
-    background-color: rgba(10,100,200,.5);
+    background-color: rgba($accent-light,.5);
 }
 
 #change .like-button {
-    background-color: rgba(255, 255, 255, 0.25);
-    border: 0 none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    margin-left: 10px;
-    padding: 3px 10px 5px;
-    transition: all 0.3s linear 0s;
-    vertical-align: top;
+    @extend %button;
 }
 
 #change .like-button:hover {

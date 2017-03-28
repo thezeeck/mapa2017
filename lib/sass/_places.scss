@@ -125,7 +125,7 @@
       @if $i < 11 {
         left: 171px + ($i * 44);
       } @else {
-        left: 227px + ($i * 44);
+        left: 213px + ($i * 44);
       }
     }
     #G#{$i} {
@@ -205,7 +205,7 @@
 }
 #RF12,
 #RF18 {
-  left: 711px;
+  left: 697px;
 }
 #RF15A,
 #RF15B,
